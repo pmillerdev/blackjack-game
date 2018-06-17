@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- HTML source for the BlackJack game -->
+<html lang="en">
+
+    <head>
+        <!-- Meta data -->
+        <meta charset="utf-8">
+
+        <title>Blackjack Game</title>
+        <!-- Styling link -->
+        <link rel="stylesheet" href="blackjack.css">
+    </head>
+
+    <body>
+        <!-- Container for top 3 sections -->
+        <div>
+            <div id="title">BlackJack Game</div>
+            <div id="message">Enter the bet amount then press Start Game</div>
+            <div class="total">
+                Total: £<span id="dollars">100</span><br>
+                Bet Amount: £<input type="number" id="mybet" value="5" min="1" max="100">
+                <button id="maxbet" type="button" onclick="maxbet()" class="btn">Max Bet</button>
+            </div>
+            <div id="start">
+                <button id="btnstart" type="button" onclick="Start()" class="btn">Start Game</button>
+            </div>
+        </div>
+        <!-- Output section -->
+        <div id="output">
+            Dealer Hand: <span id=dValue></span>
+            <div id="dealerHolder"></div>
+            Player Hand: <span id="pValue"></span>
+            <div id="playerHolder"></div>
+            <div id="myactions">
+                <button id="btnhold" type="button" onclick="cardAction('hold')" class="btn">Hold</button>
+                <button id="btnhit" type="button" onclick="cardAction('hit')" class="btn">Hit</button>
+                <button id="btndouble" type="button" onclick="cardAction('double')" class="btn">Double</button>
+            </div>
+            <div>
+                <button id="btndeal" type="button" onclick="dealNew()" class="btn">Deal</button>
+            </div>
+        </div>
+        <!-- JavaScript link -->
+        <script type="text/javascript" src="blackjack.js"></script>
+
+    </body>
+</html>

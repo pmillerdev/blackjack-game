@@ -1,0 +1,161 @@
+/* CSS for the BlackJack game */
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: lightblue;
+    }
+
+    #title {
+        font-size: 50px;
+        text-align: center;
+        background-color: lightgrey;
+        color: black;
+    }
+
+    #message {
+        height: 110px;
+        font-size: 30px;
+        text-align: center;
+        background-color: orange;
+        padding: 5px;
+    }
+
+    .total {
+        font-size: 30px;
+        text-align: center;
+        background-color: lightgrey;
+        padding: 5px;
+    }
+
+    #mybet {
+        font-size: 30px;
+        width: 65px;
+    }
+
+    #maxbet {
+        background-color: red;
+        font-size: 12px;
+    }
+
+    #btnstart {
+        background-color: black;
+        margin-left: 40%;
+    }
+
+    #output {
+        font-size: 1.5em;
+        color: black;
+    }
+
+    #myactions {
+        display: none;
+    }
+
+    .btn {
+        border-radius: 5px;
+        padding: 8px;
+        color: white;
+        display: inline-block;
+        text-align: center;
+        text-shadow: 1px 1px #000000;
+        font: normal 700 24px/1 "Calibri", sans-serif;
+    }
+
+    #cover {
+        height: 160px;
+        width: 120px;
+        background-image: url(cardback.jpg);
+        background-size: contain;
+        border-radius: 10px;
+        position: absolute;
+        border: 1px solid black;
+        padding: 3px;
+    }
+
+    .icard {
+        height: 160px;
+        width: 120px;
+        padding: 3px;
+        border: 1px solid black;
+        background-color: white;
+        border-radius: 10px;
+        position: absolute;
+        left: 100px;
+        display: inline-block;
+        font-family: "Lato";
+    }
+
+    .top-card {
+        font-size: 30px;
+        line-height: 20px;
+        left: 3px;
+        top: 3px;
+    }
+
+    .content-card {
+        text-align:center;
+        font-size: 70px;
+    }
+
+    .bottom-card {
+        font-size: 30px;
+        line-height: 20px;
+        right: 3px;
+        bottom: 3px;
+        transform: rotate(-180deg);
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+    }
+
+    .clubs, .spades {
+        color: black;
+    }
+
+    .hearts, .diams {
+        color: red;
+    }
+
+    .hearts .suit::after {
+        content: '\2665';
+    }
+
+    .diams .suit::after {
+        content: '\2666';
+    }
+
+    .spades .suit::after {
+        content: '\2660';
+    }
+
+    .clubs .suit::after {
+        content: '\2663';
+    }
+
+    #dealerHolder, #playerHolder {
+        height: 180px;
+        width: 500px;
+    }
+
+    #btnhold {
+        background-color: green;
+        width: 100px;
+    }
+
+    #btnhit {
+        background-color: red;
+        width: 100px;
+    }
+
+    #btndouble {
+        background-color: blue;
+        width: 100px;
+    }
+
+    #btndeal {
+        background-color: purple;
+        font-size: 30px;
+        display: none;
+        width: 300px;
+    }
