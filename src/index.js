@@ -8,7 +8,7 @@
     var dealerCard = [];
     // Define initial settings
     var cardCount = 0;
-    var mydollars = 100;
+    var mypounds = 100;
     var endplay = false;
     // Store page elements in variables
     var message = document.getElementById('message');
@@ -17,11 +17,11 @@
     var playerHolder = document.getElementById('playerHolder');
     var pValue = document.getElementById('pValue');
     var dValue = document.getElementById('dValue');
-    var dollarValue = document.getElementById('dollars');
+    var poundValue = document.getElementById('pounds');
     // Adjust bet amounts depending on user input
     document.getElementById("mybet").onchange = function() {
-        if(this.value > mydollars) {
-            this.value= mydollars;
+        if(this.value > mypounds) {
+            this.value= mypounds;
         }
         if(this.value < 0) {
             this.value = 0;
@@ -50,7 +50,7 @@
         shuffleDeck(cards);
         dealNew();
         document.getElementById("start").style.display = 'none';
-        dollarValue.innerHTML = mydollars;
+        poundValue.innerHTML = mypounds;
     }
     // Deal the cards, adjust display and store bet value
     function dealNew() {
@@ -60,8 +60,8 @@
         dealerHolder.innerHTML = "";
         playerHolder.innerHTML = "";
         var betvalue = document.getElementById("mybet").value;
-        mydollars = mydollars-betvalue;
-        document.getElementById("dollars").innerHTML = mydollars;
+        mypounds = mypounds-betvalue;
+        document.getElementById("pounds").innerHTML = mypounds;
         document.getElementById("myactions").style.display = 'block';
         message.innerHTML = "Get up to 21 and beat the dealer to win<br>Current bet is £"+betvalue+"<br>";
         document.getElementById("mybet").disabled = true;
@@ -103,8 +103,8 @@
     }
     // Bet the maximum amount avaliable after maxbet is clicked
     function maxbet() {
-        document.getElementById("mybet").value = mydollars;
-        message.innerHTML = "Bet changed to £"+ mydollars;
+        document.getElementById("mybet").value = mypounds;
+        message.innerHTML = "Bet changed to £"+ mypounds;
     }
     // Switch function for each of the three possible player actions
     function cardAction(a) {
@@ -117,15 +117,15 @@
                 break;
             case 'double': // double the bet amount and draw a card
                 var betvalue = parseInt(document.getElementById("mybet").value);
-                if ((mydollars - betvalue) < 0) {
-                    betvalue = betvalue + mydollars;
-                    mydollars = 0;
+                if ((mypounds - betvalue) < 0) {
+                    betvalue = betvalue + mypounds;
+                    mypounds = 0;
                 } else {
-                    mydollars = mydollars-betvalue;
+                    mypounds = mypounds-betvalue;
                     betvalue = betvalue * 2;
                 }
                 // Update amounts
-                document.getElementById("dollars").innerHTML = mydollars;
+                document.getElementById("pounds").innerHTML = mypounds;
                 document.getElementById("mybet").value = betvalue;
                 playucard();
                 playend(); // playout and calculate
@@ -172,18 +172,18 @@
         // Player win conditions
         if ((playervalue < 22 && playervalue > dealervalue) || (dealervalue > 21 && playervalue < 22)) {
             message.innerHTML += '<span style="color: green;">Congratulations! You won £' +betvalue+'!</span>';
-            mydollars = mydollars + (betvalue *2);
+            mypounds = mypounds + (betvalue *2);
         } // Tie/push condition
         else if (playervalue == dealervalue) {
             message.innerHTML += '<span style="color: blue;">PUSH - All bets are returned</span>';
-            mydollars = mydollars + betvalue;
+            mypounds = mypounds + betvalue;
         } // Dealer victory otherwise
         else {
             message.innerHTML += '<span style="color: red;">Dealer wins! You lost £' +betvalue+'</span>';
         }
         // Update amounts
         pValue.innerHTML = playervalue;
-        dollarValue.innerHTML = mydollars;
+        poundValue.innerHTML = mypounds;
         message.innerHTML += '<br>Enter the bet amount then click Deal';
     }
     // Adjust the total for an ace being either 11 or 1
