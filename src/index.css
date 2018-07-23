@@ -1,7 +1,5 @@
 /* CSS for the BlackJack game */
     body {
-        margin: 0 !important;
-        padding: 0 !important;
         background-color: lightblue;
     }
 
@@ -33,12 +31,10 @@
     }
 
     #maxbet {
-        background-color: red;
         font-size: 12px;
     }
 
     #btnstart {
-        background-color: black;
         margin-left: 40%;
     }
 
@@ -49,16 +45,6 @@
 
     #myactions {
         display: none;
-    }
-
-    .btn {
-        border-radius: 5px;
-        padding: 8px;
-        color: white;
-        display: inline-block;
-        text-align: center;
-        text-shadow: 1px 1px #000000;
-        font: normal 700 24px/1 "Calibri", sans-serif;
     }
 
     #cover {
@@ -85,19 +71,19 @@
         font-family: "Lato";
     }
 
-    .top-card {
+    .card-top-section {
         font-size: 25px;
         line-height: 20px;
         left: 5px;
         top: 5px;
     }
 
-    .content-card {
+    .card-middle-section {
         text-align:center;
-        font-size: 70px;
+        font-size: 50px;
     }
 
-    .bottom-card {
+    .card-bottom-section {
         font-size: 25px;
         line-height: 20px;
         right: 5px;
@@ -139,21 +125,14 @@
     }
 
     #btnhold {
-        background-color: green;
         width: 100px;
     }
 
     #btnhit {
-        background-color: red;
         width: 100px;
     }
 
-    #btndouble {
-        background-color: blue;
-    }
-
     #btndeal {
-        background-color: purple;
         font-size: 30px;
         display: none;
         width: 300px;
