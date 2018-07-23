@@ -1,27 +1,27 @@
 /* CSS for the BlackJack game */
     body {
-        background-color: lightblue;
+        background-color: #5bc0de;
     }
 
     #title {
         font-size: 50px;
         text-align: center;
-        background-color: lightgrey;
-        color: black;
+        color: #222;
     }
 
     #message {
         height: 110px;
         font-size: 30px;
         text-align: center;
-        background-color: orange;
+        background-color: #f0ad4e;
+        color: #222;
         padding: 5px;
     }
 
     .total {
         font-size: 30px;
         text-align: center;
-        background-color: lightgrey;
+        background-color: #eee;
         padding: 5px;
     }
 
@@ -40,7 +40,10 @@
 
     #output {
         font-size: 1.5em;
-        color: black;
+        color: #222;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     #myactions {
@@ -133,7 +136,5 @@
     }
 
     #btndeal {
-        font-size: 30px;
         display: none;
-        width: 300px;
     }

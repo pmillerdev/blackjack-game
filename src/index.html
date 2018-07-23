@@ -24,8 +24,8 @@
     <body>
         <!-- Container for top 3 sections -->
         <div>
-            <div id="title">Blackjack Game</div>
-            <div id="message">Enter the bet amount then press Start Game</div>
+            <h1 id="title">Blackjack Game</h1>
+            <h2 id="message">Enter the bet amount then press Start Game</h2>
             <div class="total">
                 Total: £<span id="pounds">100</span><br>
                 Bet Amount: £<input type="number" id="mybet" value="5" min="1" max="100">
@@ -47,7 +47,7 @@
                 <button id="btndouble" type="button" onclick="cardAction('double')" class="btn btn-danger">Double</button>
             </div>
             <div>
-                <button id="btndeal" type="button" onclick="dealNew()" class="btn btn-primary">Deal</button>
+                <button id="btndeal" type="button" onclick="dealNew()" class="btn btn-primary btn-lg">Deal</button>
             </div>
         </div>
         <!-- JavaScript link -->
