@@ -1,4 +1,4 @@
-// JavaScript source for the BlackJack game
+// JavaScript source for the Blackjack game
 
     // Variables required for the cards
     var cards = [];
@@ -171,15 +171,15 @@
         var betvalue = parseInt(document.getElementById("mybet").value) * payoutJack;
         // Player win conditions
         if ((playervalue < 22 && playervalue > dealervalue) || (dealervalue > 21 && playervalue < 22)) {
-            message.innerHTML += '<span style="color: green;">Congratulations! You won £' +betvalue+'!</span>';
+            message.innerHTML += '<span style="color: #5cb85c;">Congratulations! You won £' +betvalue+'!</span>';
             mypounds = mypounds + (betvalue *2);
         } // Tie/push condition
         else if (playervalue == dealervalue) {
-            message.innerHTML += '<span style="color: blue;">PUSH - All bets are returned</span>';
+            message.innerHTML += '<span style="color: #428bca;">PUSH - All bets are returned</span>';
             mypounds = mypounds + betvalue;
         } // Dealer victory otherwise
         else {
-            message.innerHTML += '<span style="color: red;">Dealer wins! You lost £' +betvalue+'</span>';
+            message.innerHTML += '<span style="color: #d9534f;">Dealer wins! You lost £' +betvalue+'</span>';
         }
         // Update amounts
         pValue.innerHTML = playervalue;

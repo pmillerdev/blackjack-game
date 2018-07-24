@@ -1,53 +1,40 @@
-/* CSS for the BlackJack game */
+/* CSS for the Blackjack game */
     body {
-        background-color: #5bc0de;
+        background-color: #fcf8e3;
     }
 
     #title {
         font-size: 50px;
         text-align: center;
-        color: #222;
+        margin: 0;
+        padding: 5px;
     }
 
     #message {
         height: 110px;
         font-size: 30px;
         text-align: center;
-        background-color: #f0ad4e;
-        color: #222;
         padding: 5px;
+        margin: 0;
+        background-color: #d9534f;
+        color: #fcf8e3
     }
 
-    .total {
-        font-size: 30px;
-        text-align: center;
-        background-color: #eee;
-        padding: 5px;
-    }
-
-    #mybet {
-        font-size: 30px;
-        width: 65px;
-    }
-
-    #maxbet {
-        font-size: 12px;
-    }
-
-    #btnstart {
-        margin-left: 40%;
+    #start {
+       margin-top: 10px;
     }
 
     #output {
-        font-size: 1.5em;
-        color: #222;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
+        font-size: 2em;
+        color: #fcf8e3;
+        background-color: #5cb85c;
+        border-radius: 20px;
+        margin: 10px;
     }
 
-    #myactions {
-        display: none;
+    #dealerHolder, #playerHolder {
+        min-height: 180px;
+        min-width: 500px;
     }
 
     #cover {
@@ -122,9 +109,25 @@
         content: '\2663';
     }
 
-    #dealerHolder, #playerHolder {
-        height: 180px;
-        width: 500px;
+    .amounts {
+        font-size: 30px;
+        text-align: center;
+        padding: 5px;
+    }
+
+    #mybet {
+        font-size: 30px;
+        width: 65px;
+    }
+
+    #maxbet {
+        font-size: 12px;
+    }
+
+    #myactions {
+        display: none;
+        width: 100%;
+        margin-top: 5px;
     }
 
     #btnhold {
@@ -137,4 +140,6 @@
 
     #btndeal {
         display: none;
+        margin-top: 10px;
+        align-self: center;
     }
