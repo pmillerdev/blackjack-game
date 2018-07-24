@@ -179,7 +179,7 @@
             mypounds = mypounds + betvalue;
         } // Dealer victory otherwise
         else {
-            message.innerHTML += '<span style="color: #d9534f;">Dealer wins! You lost £' +betvalue+'</span>';
+            message.innerHTML += '<span>Dealer wins! You lost £' +betvalue+'</span>';
         }
         // Update amounts
         pValue.innerHTML = playervalue;
