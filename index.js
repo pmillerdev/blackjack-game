@@ -60,14 +60,21 @@
         dealerHolder.innerHTML = "";
         playerHolder.innerHTML = "";
         var betvalue = document.getElementById("mybet").value;
-        mypounds = mypounds-betvalue;
-        document.getElementById("pounds").innerHTML = mypounds;
-        document.getElementById("myactions").style.display = 'block';
-        message.innerHTML = "Get up to 21 and beat the dealer to win<br>Current bet is £"+betvalue+"<br>";
-        document.getElementById("mybet").disabled = true;
-        document.getElementById("maxbet").disabled = true;
-        deal();
-        document.getElementById("btndeal").style.display = 'none';
+        mypounds = mypounds - betvalue;
+        if (mypounds < 0) {
+            mypounds = 0;
+            document.getElementById("pounds").innerHTML = mypounds;
+            document.getElementById("game-over").style.display = 'block';
+            document.getElementById("amounts-actions").style.display = 'none';
+        } else {
+            document.getElementById("pounds").innerHTML = mypounds;
+            document.getElementById("myactions").style.display = 'block';
+            message.innerHTML = "Get up to 21 and beat the dealer to win<br>Current bet is £"+betvalue+"<br>";
+            document.getElementById("mybet").disabled = true;
+            document.getElementById("maxbet").disabled = true;
+            deal();
+            document.getElementById("btndeal").style.display = 'none';
+        }
     }
     // Shuffle the deck before dealing if more than 40 cards have been used
     function redeal() {
@@ -150,7 +157,7 @@
         endplay = true;
         document.getElementById("cover").style.display = 'none';
         document.getElementById("myactions").style.display = 'none';
-        document.getElementById("btndeal").style.display = 'block';
+        document.getElementById("btndeal").style.display = 'inline-block';
         document.getElementById("mybet").disabled = false;
         document.getElementById("maxbet").disabled = false;
         message.innerHTML = "Game Over</br>";
@@ -179,7 +186,7 @@
             mypounds = mypounds + betvalue;
         } // Dealer victory otherwise
         else {
-            message.innerHTML += '<span>Dealer wins! You lost £' +betvalue+'</span>';
+            message.innerHTML += '<span style="color: #d9534f;">Dealer wins! You lost £' +betvalue+'</span>';
         }
         // Update amounts
         pValue.innerHTML = playervalue;

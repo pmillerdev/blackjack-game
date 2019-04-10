@@ -11,25 +11,17 @@
     }
 
     #message {
-        height: 110px;
+        height: auto;
         font-size: 30px;
         text-align: center;
-        padding: 5px;
-        margin: 0;
-        background-color: #d9534f;
-        color: #fcf8e3
-    }
-
-    #start {
-       margin-top: 10px;
     }
 
     #output {
         font-size: 2em;
+        padding: 1em;
         color: #fcf8e3;
         background-color: #5cb85c;
-        border-radius: 20px;
-        margin: 10px;
+        border-radius: 1em;
     }
 
     #dealerHolder, #playerHolder {
@@ -109,7 +101,21 @@
         content: '\2663';
     }
 
+    #game-over {
+        display: none;
+        margin-top: 20px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    #start {
+        text-align: center;
+        width: 100%;
+        margin-top: 15px;
+    }
+
     .amounts {
+        margin-top: 15px;
         font-size: 30px;
         text-align: center;
         padding: 5px;
@@ -127,7 +133,7 @@
     #myactions {
         display: none;
         width: 100%;
-        margin-top: 5px;
+        margin-top: 10px;
     }
 
     #btnhold {
@@ -136,6 +142,11 @@
 
     #btnhit {
         width: 100px;
+    }
+
+    #btndeal-container {
+        text-align: center;
+        width: 100%;
     }
 
     #btndeal {
