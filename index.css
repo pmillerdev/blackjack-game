@@ -1,163 +1,169 @@
 /* CSS for the Blackjack game */
-    body {
-        background-color: #fcf8e3;
-    }
+body {
+  background-color: #fcf8e3;
+}
 
-    #title {
-        font-size: 50px;
-        text-align: center;
-        margin: 0;
-        padding: 5px;
-    }
+#title {
+  font-size: 50px;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+}
 
-    #message {
-        height: auto;
-        font-size: 30px;
-        text-align: center;
-    }
+#message {
+  height: auto;
+  font-size: 30px;
+  text-align: center;
+}
 
-    #output {
-        font-size: 2em;
-        padding: 1em;
-        color: #fcf8e3;
-        background-color: #5cb85c;
-        border-radius: 1em;
-    }
+#output {
+  font-size: 2em;
+  padding: 1em;
+  color: #fcf8e3;
+  background-color: #5cb85c;
+  border-radius: 1em;
+}
 
-    #dealerHolder, #playerHolder {
-        min-height: 180px;
-        min-width: 500px;
-    }
+#dealerHolder,
+#playerHolder {
+  min-height: 180px;
+  min-width: 500px;
+}
 
-    #cover {
-        height: 160px;
-        width: 120px;
-        background-image: url(cardback.jpg);
-        background-size: contain;
-        border-radius: 10px;
-        position: absolute;
-        border: 1px solid black;
-        padding: 3px;
-    }
+#cover {
+  height: 160px;
+  width: 120px;
+  z-index: 1;
+  background-color: #fff;
+  background-image: url(cardback.jpg);
+  background-size: contain;
+  border-radius: 10px;
+  position: absolute;
+  border: 1px solid black;
+  padding: 3px;
+  z-index: 1;
+}
 
-    .icard {
-        height: 160px;
-        width: 120px;
-        padding: 3px;
-        border: 1px solid black;
-        background-color: white;
-        border-radius: 10px;
-        position: absolute;
-        left: 100px;
-        display: inline-block;
-        font-family: "Lato";
-    }
+.icard {
+  height: 160px;
+  width: 120px;
+  padding: 3px;
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 10px;
+  position: absolute;
+  left: 100px;
+  display: inline-block;
+  font-family: "Lato";
+}
 
-    .card-top-section {
-        font-size: 25px;
-        line-height: 20px;
-        left: 5px;
-        top: 5px;
-    }
+.card-top-section {
+  font-size: 25px;
+  line-height: 20px;
+  left: 5px;
+  top: 5px;
+}
 
-    .card-middle-section {
-        text-align:center;
-        font-size: 50px;
-    }
+.card-middle-section {
+  text-align: center;
+  font-size: 50px;
+}
 
-    .card-bottom-section {
-        font-size: 25px;
-        line-height: 20px;
-        right: 5px;
-        bottom: 5px;
-        transform: rotate(-180deg);
-        -webkit-transform: rotate(-180deg);
-        -moz-transform: rotate(-180deg);
-        -ms-transform: rotate(-180deg);
-        -o-transform: rotate(-180deg);
-    }
+.card-bottom-section {
+  font-size: 25px;
+  line-height: 20px;
+  right: 5px;
+  bottom: 5px;
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+}
 
-    .clubs, .spades {
-        color: black;
-    }
+.clubs,
+.spades {
+  color: black;
+}
 
-    .hearts, .diams {
-        color: red;
-    }
+.hearts,
+.diams {
+  color: red;
+}
 
-    .hearts .suit::after {
-        content: '\2665';
-    }
+.hearts .suit::after {
+  content: "\2665";
+}
 
-    .diams .suit::after {
-        content: '\2666';
-    }
+.diams .suit::after {
+  content: "\2666";
+}
 
-    .spades .suit::after {
-        content: '\2660';
-    }
+.spades .suit::after {
+  content: "\2660";
+}
 
-    .clubs .suit::after {
-        content: '\2663';
-    }
+.clubs .suit::after {
+  content: "\2663";
+}
 
-    #game-over {
-        display: none;
-        margin-top: 20px;
-        text-align: center;
-        font-size: 30px;
-    }
+#game-over {
+  display: none;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 30px;
+}
 
-    #start {
-        text-align: center;
-        width: 100%;
-        margin-top: 15px;
-    }
+#start {
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+}
 
-    .amounts {
-        margin-top: 15px;
-        font-size: 30px;
-        text-align: center;
-        padding: 5px;
-    }
+.amounts {
+  margin-top: 15px;
+  font-size: 30px;
+  text-align: center;
+  padding: 5px;
+}
 
-    #mybet {
-        font-size: 30px;
-        width: 65px;
-    }
+#mybet {
+  font-size: 30px;
+  width: 65px;
+}
 
-    #maxbet {
-        font-size: 12px;
-    }
+#maxbet {
+  font-size: 12px;
+}
 
-    #myactions {
-        display: none;
-        width: 100%;
-        margin-top: 10px;
-    }
+#myactions {
+  display: none;
+  width: 100%;
+  margin-top: 10px;
+}
 
-    #btnhold {
-        width: 100px;
-    }
+#btnhold {
+  width: 100px;
+}
 
-    #btnhit {
-        width: 100px;
-    }
+#btnhit {
+  width: 100px;
+}
 
-    #btndeal-container {
-        text-align: center;
-        width: 100%;
-    }
+#btndeal-container {
+  text-align: center;
+  width: 100%;
+}
 
-    #btndeal {
-        display: none;
-        margin-top: 10px;
-        align-self: center;
-    }
+#btndeal {
+  display: none;
+  margin-top: 10px;
+  align-self: center;
+}
 
 @media only screen and (max-width: 767px) {
-    #dealerHolder, 
-    #playerHolder {
-        min-width: 0;
-    }   
+  #dealerHolder,
+  #playerHolder {
+    min-width: 0;
+  }
 }

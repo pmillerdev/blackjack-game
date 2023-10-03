@@ -1,64 +1,130 @@
 <!DOCTYPE html>
 <!-- HTML source for the Blackjack game -->
 <html lang="en">
-    <head>
-        <!-- Meta data -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>Blackjack Game</title>
-        <!-- jQuery Script (Required for Bootstrap) -->
-        <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>        
-        <!-- Bootstrap Styles-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <!-- Bootstrap JavaScript-->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>        
-        <!-- My Styles -->
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
+  <head>
+    <!-- Meta data -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>Blackjack Game</title>
+    <!-- jQuery Script (Required for Bootstrap) -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap Styles-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+      crossorigin="anonymous"
+    />
+    <!-- Bootstrap JavaScript-->
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+    <!-- My Styles -->
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div>
+      <!-- Container for title and description -->
+      <div>
+        <h1 id="title" class="bg-primary">Blackjack Game</h1>
+        <div id="message" class="alert alert-info">
+          Enter the amount you want to bet then press Start Game
+        </div>
+      </div>
+      <!-- Display cards section -->
+      <div id="output" class="col-xs-12 col-sm-6 col-sm-offset-3">
         <div>
-            <!-- Container for title and description -->
-            <div>
-                <h1 id="title" class="bg-primary">Blackjack Game</h1>
-                <div id="message" class="alert alert-info">Enter the amount you want to bet then press Start Game</div>         
-            </div>
-            <!-- Display cards section -->
-            <div id="output" class="col-xs-12 col-sm-6 col-sm-offset-3" >
-                <div>
-                    Dealer's Hand: <span id=dValue></span>
-                    <div id="dealerHolder"></div>
-                </div>
-                <div>
-                    Player's Hand: <span id="pValue"></span>
-                    <div id="playerHolder"></div>
-                </div>
-            </div>
-            <div class="col-xs-12">
-                <!-- Start button -->
-                <div id="start">
-                    <button id="btnstart" type="button" onclick="Start()" class="btn btn-primary btn-lg">Start Game</button>
-                </div>                   
-                <!-- Amounts and actions section -->
-                <div id="game-over" class="alert alert-danger">I'm afraid you have run out of money! Please refresh the page to start again.</div>
-                <div id="amounts-actions" class="amounts" >
-                    Bank Total: £<span id="pounds">100</span><br>
-                    Bet Amount: £<input type="number" id="mybet" value="5" min="1" max="100">
-                    <button id="maxbet" type="button" onclick="maxbet()" class="btn btn-danger">Max Bet</button>
-                    <div id="myactions">
-                        <button id="btnhold" type="button" onclick="cardAction('hold')" class="btn btn-success">Hold</button>
-                        <button id="btnhit" type="button" onclick="cardAction('hit')" class="btn btn-warning">Hit</button>
-                        <button id="btndouble" type="button" onclick="cardAction('double')" class="btn btn-danger">Double</button>
-                    </div>
-                    <div id="btndeal-container">
-                        <button id="btndeal" type="button" onclick="dealNew()" class="btn btn-primary btn-lg">Deal</button>
-                    </div>
-                </div>   
-            </div>             
-        </div>        
-        <!-- My JavaScript-->
-        <script type="text/javascript" src="index.js"></script>
-    </body>
+          Dealer's Hand: <span id="dValue"></span>
+          <div id="dealerHolder"></div>
+        </div>
+        <div>
+          Player's Hand: <span id="pValue"></span>
+          <div id="playerHolder"></div>
+        </div>
+      </div>
+      <div class="col-xs-12">
+        <!-- Start button -->
+        <div id="start">
+          <button
+            id="btnstart"
+            type="button"
+            onclick="Start()"
+            class="btn btn-primary btn-lg"
+          >
+            Start Game
+          </button>
+        </div>
+        <!-- Amounts and actions section -->
+        <div id="game-over" class="alert alert-danger">
+          I'm afraid you have run out of money! Please refresh the page to start
+          again.
+        </div>
+        <div id="amounts-actions" class="amounts">
+          Bank Total: £<span id="pounds">100</span><br />
+          Bet Amount: £<input
+            type="number"
+            id="mybet"
+            value="5"
+            min="1"
+            max="100"
+          />
+          <button
+            id="maxbet"
+            type="button"
+            onclick="maxbet()"
+            class="btn btn-danger"
+          >
+            Max Bet
+          </button>
+          <div id="myactions">
+            <button
+              id="btnhold"
+              type="button"
+              onclick="cardAction('hold')"
+              class="btn btn-success"
+            >
+              Hold
+            </button>
+            <button
+              id="btnhit"
+              type="button"
+              onclick="cardAction('hit')"
+              class="btn btn-warning"
+            >
+              Hit
+            </button>
+            <button
+              id="btndouble"
+              type="button"
+              onclick="cardAction('double')"
+              class="btn btn-danger"
+            >
+              Double
+            </button>
+          </div>
+          <div id="btndeal-container">
+            <button
+              id="btndeal"
+              type="button"
+              onclick="dealNew()"
+              class="btn btn-primary btn-lg"
+            >
+              Deal
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- My JavaScript-->
+    <script type="text/javascript" src="index.js"></script>
+  </body>
 </html>
