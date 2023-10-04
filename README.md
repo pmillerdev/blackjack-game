@@ -4,4 +4,6 @@ Allows the user to play Blackjack (also known as 21) in the browser. I created t
 
 Technologies used: HTML, CSS, Vanilla(pre ES6) JavaScript.
 
-Open `index.html` in the browser to view locally.
+## Running Locally
+
+Open `index.html` in the browser.
